@@ -39,12 +39,20 @@ if (Meteor.isServer) {
   // This code only runs on the server
   // [Point #4.a] Publish all system messages for a logged in user
   Meteor.publish('messages', function messagesPublication() {
-    // if (!this.userId) {
-    //   this.ready();
-    //   return;
-    // }
+    if (!this.userId) {
+      this.ready();
+      return;
+    }
 
-    return Messages.find({}, { sort: { createdAt: -1 }, pollingThrottleMs: 300, pollingIntervalMs: 300});
+    // Return today's data
+    var start = new Date();
+    start.setHours(0,0,0,0);
+    var end = new Date();
+    end.setHours(23,59,59,999);
+    return Messages.find({createdAt: { $gte: start, $lt: end } }, { sort: { createdAt: -1 }, pollingThrottleMs: 300, pollingIntervalMs: 300});
+
+    // Return all data
+    // return Messages.find({}, { sort: { createdAt: -1 }, pollingThrottleMs: 300, pollingIntervalMs: 300});
   });
 }
 
