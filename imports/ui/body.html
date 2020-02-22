@@ -1,6 +1,6 @@
 <body>
   <div class="container">
-    <header>
+    <header class="sticky">
       <h1>Data Flow - {{ today }}</h1>
 
       {{> loginButtons}}
@@ -12,10 +12,13 @@
       {{/if}}
     </header>
 
-    <ul>
+    <ul class="content">
       {{#each messages}}
         {{> message}}
       {{/each}}
     </ul>
+
+    <footer>
+    </footer>
   </div>
 </body>
