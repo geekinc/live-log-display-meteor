@@ -115,6 +115,32 @@ li.private {
   border-color: #ddd;
 }
 
+li.cognito {
+  background: #EBF5FB;
+  border-color: #D6EAF8;
+}
+
+li.blockchain {
+  background: #FBEEE6;
+  border-color: #F6DDCC;
+}
+
+li.sns {
+  background: #E8F6F3;
+  border-color: #D0ECE7;
+}
+
+li.api {
+  background: #F4ECF7;
+  border-color: #E8DAEF;
+}
+
+li.ses {
+  background: #FEF9E7;
+  border-color: #FCF3CF;
+}
+
+
 header .hide-completed {
   float: right;
 }
