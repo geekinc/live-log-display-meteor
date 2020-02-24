@@ -18,6 +18,9 @@ Template.registerHelper('fetchClass', function(text) {
     if (text.includes('FABRIC:'))
         classes += 'blockchain ';
 
+    if (text.includes('BLOCKCHAIN:'))
+        classes += 'blockchain ';
+
     if (text.includes('SNS:'))
         classes += 'sns ';
 
