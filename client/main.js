@@ -17,7 +17,7 @@ Template.registerHelper('fetchClass', function(text) {
         classes += 'cognito ';
 
     if (text.includes('FABRIC:'))
-        classes += 'blockchain ';
+        classes += 'private ';
 
     if (text.includes('QLDB:'))
         classes += 'blockchain ';
