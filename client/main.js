@@ -6,6 +6,10 @@ Template.registerHelper('formatDate', function(date) {
     return moment(date).valueOf();
 });
 
+Template.registerHelper('extractID', function(text) {
+    return JSON.parse(text.split(': ')[1]).transactionId
+});
+
 Template.registerHelper('today', function() {
     return moment().format('MM/DD/YYYY');
 });
