@@ -19,6 +19,9 @@ Template.registerHelper('fetchClass', function(text) {
     if (text.includes('FABRIC:'))
         classes += 'blockchain ';
 
+    if (text.includes('QLDB:'))
+        classes += 'blockchain ';
+
     if (text.includes('BLOCKCHAIN:'))
         classes += 'blockchain ';
 
@@ -29,6 +32,9 @@ Template.registerHelper('fetchClass', function(text) {
         classes += 'api ';
 
     if (text.includes('SES:'))
+        classes += 'ses ';
+
+    if (text.includes('RDS:'))
         classes += 'ses ';
 
     return classes;
